@@ -8,7 +8,7 @@ Initially, add a bridge: ```sudo ovs-vsctl add-br mybridge```
 
 Turn up the bridge interface: ```sudo ifconfig mybridge up```
 
-Add eth0 port (typical gateway through which all the packets flow through) to mybridge interface connected to OVS: ```ovs-vsctl add-port mybridge eth0```
+Add eth0 port (typical gateway through which all the packets flow through) to mybridge interface connected to OVS: ```sudo ovs-vsctl add-port mybridge eth0```
                                
 Now the eth0 port is connected to the bridge via OVS, Hence Open vSwitch has a control over all the packets flowing through the eth0 port.
 
@@ -16,6 +16,6 @@ Now the eth0 port is connected to the bridge via OVS, Hence Open vSwitch has a c
 # Command Line Tool
 
 To dynamically load any DPI plugin to run over the OVS, a command line tool has been inserted in the vswitchd.c of OVS
-sudo ovs-vswitchd --dpi-engine=<path to plugin>
+```sudo ovs-vswitchd --dpi-engine=<path to plugin>```
 
 
