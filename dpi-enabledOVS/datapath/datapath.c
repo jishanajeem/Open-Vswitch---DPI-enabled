@@ -270,7 +270,7 @@ void ovs_dp_process_packet(struct sk_buff *skb, struct sw_flow_key *key)
 	flow = ovs_flow_tbl_lookup_stats(&dp->table, key, skb_get_hash(skb),
 					 &n_mask_hit);
 
-	/************************ kspviswa - dpi-enabled-ovs *******************************
+	/************************ amritasdn - dpi-enabled-ovs *******************************
 	 * Before proceeding to validate flow for upcall,
 	 * let us duplicate the packet and enqueue this packet for DPI in userspace for DPI
 	 * processing
